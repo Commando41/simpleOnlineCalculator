@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Web Calculator</title>
+        <link rel="stylesheet" href="calculator.css">
+    </head>
+    <body>
+        <h1>Online Web Calculator</h1>
+        <div id="calculator">
+            <h3 id="screen">0</h3>
+            <div id="buttons">
+                <input type="button" value="1" onclick="addDigit(1)" class="btn-numbers"/>
+                <input type="button" value="2" onclick="addDigit(2)" class="btn-numbers"/>
+                <input type="button" value="3" onclick="addDigit(3)" class="btn-numbers"/>
+                <input type="button" value="+" onclick="addition()" class="btn-operators"/>                
+                <input type="button" value="C/CE" onclick="reset()" class="btn-operators"/>
+                <br>
+                <input type="button" value="4" onclick="addDigit(4)" class="btn-numbers"/>
+                <input type="button" value="5" onclick="addDigit(5)" class="btn-numbers"/>
+                <input type="button" value="6" onclick="addDigit(6)" class="btn-numbers"/>
+                <input type="button" value="-" onclick="subtraction()" class="btn-operators"/>                
+                <input type="button" value="%" onclick="percentage()" class="btn-operators"/>
+                <br>
+                <input type="button" value="7" onclick="addDigit(7)" class="btn-numbers"/>
+                <input type="button" value="8" onclick="addDigit(8)" class="btn-numbers"/>
+                <input type="button" value="9" onclick="addDigit(9)" class="btn-numbers"/>
+                <input type="button" value="x" onclick="multiplecation()" class="btn-operators"/>                
+                <input type="button" value="√" onclick="square_root()" class="btn-operators"/>
+                <br>
+                <input type="button" value="." onclick="addDigit('.')" class="btn-numbers"/>
+                <input type="button" value="0" onclick="addDigit(0)" class="btn-numbers"/>
+                <input type="button" value="DEL" onclick="removeDigit()" class="btn-numbers"/>
+                <input type="button" value="÷" onclick="division()" class="btn-operators"/>                
+                <input type="button" value="=" onclick="equal()" class="btn-operators"/>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="calculator.js"></script>
+    </body>
+</html>
