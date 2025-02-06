@@ -117,18 +117,25 @@ function operating() {
 
 function reset() {
 
-    if(C_CE.value == "C") {
-        C_CE.value = "CE";
-        screen.innerHTML = "0";
-        percentages = 0;
-    } else {
+    if(C_CE.value == "CE") {
         a = 0;    
         operated = false;
     }
+    C_CE.value = "CE";
+    screen.innerHTML = "0";
+    percentages = 0;
 }
 
 function percentage() {
     percentages = (percentages + 1) % 2;
+    percentage_button = document.getElementById("percentage");
+    if(percentages) {
+        percentage_button.style.backgroundColor = "blue";
+        percentage_button.style.color = "white";
+    }else{
+        percentage_button.style.backgroundColor = 'rgb(198, 130, 2)';
+        percentage_button.style.color = "black";
+    }
 }
 
 function square_root() {
