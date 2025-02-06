@@ -1,4 +1,5 @@
 screen = document.getElementById("screen");
+C_CE = document.getElementById("C_CE");
 
 var a = 0;
 var operated = false;
@@ -10,6 +11,7 @@ function addDigit( digit ) {
     }
     if(screen.innerHTML == "0") {
         screen.innerHTML = digit;
+        C_CE.value = "C";
     }else{
         screen.innerHTML += digit;
     }
@@ -113,6 +115,7 @@ function operating() {
 }
 
 function reset() {
+    C_CE.value = "CE";
     a = 0;
     screen.innerHTML = "0";
     operated = false;
