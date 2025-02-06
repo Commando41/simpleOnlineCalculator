@@ -28,26 +28,33 @@ function removeDigit() {
 }
 
 function addition() {
+    if( operated == true ) {
+        operated = false;
+    }
     a = operating();
     screen.innerHTML = "+";
 }
 
 function subtraction() {
-    if( operated == false ) {
-        a = operating();
-    }else{
+    if( operated == true ) {
         operated = false;
-        a = 0;
     }
+    a = operating();
     screen.innerHTML = "-";
 }
 
 function multiplecation() {
+    if( operated == true ) {
+        operated = false;
+    }
     a = operating();
     screen.innerHTML = "x";
 }
 
 function division() {
+    if( operated == true ) {
+        operated = false;
+    }
     a = operating();
     screen.innerHTML = "÷";
 }
