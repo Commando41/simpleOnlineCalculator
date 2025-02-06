@@ -18,9 +18,10 @@ function addDigit( digit ) {
 }
 
 function removeDigit() {
-    if(screen.innerHTML.length == 1)
+    if(screen.innerHTML.length == 1) {
         screen.innerHTML = "0";
-    else {
+        C_CE.value = "CE";
+    } else {
         let newString = "";
         for(let i = 0; i < screen.innerHTML.length-1; i++) {
             newString += screen.innerHTML[i]
@@ -115,11 +116,15 @@ function operating() {
 }
 
 function reset() {
-    C_CE.value = "CE";
-    a = 0;
-    screen.innerHTML = "0";
-    operated = false;
-    percentages = 0;
+
+    if(C_CE.value == "C") {
+        C_CE.value = "CE";
+        screen.innerHTML = "0";
+        percentages = 0;
+    } else {
+        a = 0;    
+        operated = false;
+    }
 }
 
 function percentage() {
