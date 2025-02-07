@@ -179,5 +179,11 @@ function M_Op( operation ) {
 }
 
 function inverse() {
-    screen.innerHTML = `${parseFloat(screen.innerHTML) ** -1}`;
+    let inversed = screen.innerHTML;
+    let op = "";
+    if(inversed.charCodeAt(0) < 48 || inversed.charCodeAt(0) > 57) {
+        op = inversed[0];
+        inversed = inversed.slice(1,);
+    }
+    screen.innerHTML = op + `${parseFloat(inversed) ** -1}`;
 }
