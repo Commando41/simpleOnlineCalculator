@@ -10,11 +10,17 @@
         <div id="calculator">
             <h3 id="screen">0</h3>
             <div id="buttons">
+                <input type="button" value="MR" onclick="M_Op('R')" class="btn-operators"/>
+                <input type="button" value="M+" onclick="M_Op('P')" class="btn-operators"/>
+                <input type="button" value="M-" onclick="M_Op('M')" class="btn-operators"/>
+                <input type="button" value="MC" onclick="M_Op('C')" class="btn-operators"/>            
+                <input type="button" value="CE" onclick="reset()" class="btn-operators" id="C_CE"/>    
+                <br>
                 <input type="button" value="1" onclick="addDigit(1)" class="btn-numbers"/>
                 <input type="button" value="2" onclick="addDigit(2)" class="btn-numbers"/>
                 <input type="button" value="3" onclick="addDigit(3)" class="btn-numbers"/>
-                <input type="button" value="+" onclick="addition()" class="btn-operators"/>                
-                <input type="button" value="CE" onclick="reset()" class="btn-operators" id="C_CE"/>
+                <input type="button" value="+" onclick="addition()" class="btn-operators"/>
+                <input type="button" value="1/x" onclick="inverse()" class="btn-operators"/>
                 <br>
                 <input type="button" value="4" onclick="addDigit(4)" class="btn-numbers"/>
                 <input type="button" value="5" onclick="addDigit(5)" class="btn-numbers"/>

@@ -155,3 +155,29 @@ function square_root() {
     screen.innerHTML += `${Math.sqrt(parseFloat(newString))}`;
 
 }
+
+var register_M = 0;
+
+function M_Op( operation ) {
+    switch( operation ) {
+        case "P":
+            register_M = register_M + parseFloat(screen.innerHTML);
+        break;
+
+        case "M":
+            register_M = register_M - parseFloat(screen.innerHTML);
+        break;
+
+        case "R":
+            screen.innerHTML = register_M;
+        break;
+
+        case "C":
+            register_M = 0;
+        break;
+    }
+}
+
+function inverse() {
+    screen.innerHTML = `${parseFloat(screen.innerHTML) ** -1}`;
+}
