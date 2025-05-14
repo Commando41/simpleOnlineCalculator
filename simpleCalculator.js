@@ -6,13 +6,14 @@ var operated = false;
 var percentages = 0;
 
 function addDigit( digit ) {
-    if(operated == true){
+    if(operated) {
+        operated = false;
         reset();
     }
     if(screen.innerHTML == "0") {
         screen.innerHTML = digit;
         C_CE.value = "C";
-    }else{
+    } else {
         screen.innerHTML += digit;
     }
 }
@@ -31,7 +32,7 @@ function removeDigit() {
 }
 
 function addition() {
-    if( operated == true ) {
+    if( operated ) {
         operated = false;
     }
     a = operating();
@@ -39,7 +40,7 @@ function addition() {
 }
 
 function subtraction() {
-    if( operated == true ) {
+    if( operated ) {
         operated = false;
     }
     a = operating();
@@ -47,7 +48,7 @@ function subtraction() {
 }
 
 function multiplecation() {
-    if( operated == true ) {
+    if( operated ) {
         operated = false;
     }
     a = operating();
@@ -55,7 +56,7 @@ function multiplecation() {
 }
 
 function division() {
-    if( operated == true ) {
+    if( operated ) {
         operated = false;
     }
     a = operating();
@@ -95,6 +96,8 @@ function operating() {
                 a = a/b;
                 break;
         }
+        if(percentages) 
+            percentage();
     } else {
         switch(op) {
             case "+":
@@ -111,19 +114,18 @@ function operating() {
                 break;
         }
     }
-    percentages = 0;
     return a;
 }
 
 function reset() {
-
     if(C_CE.value == "CE") {
         a = 0;    
         operated = false;
     }
     C_CE.value = "CE";
     screen.innerHTML = "0";
-    percentages = 0;
+    if(percentages) 
+        percentage();
 }
 
 function percentage() {
@@ -153,7 +155,7 @@ function square_root() {
         screen.innerHTML = b[0];
     }
     screen.innerHTML += `${Math.sqrt(parseFloat(newString))}`;
-
+    operated = true;
 }
 
 var register_M = 0;
