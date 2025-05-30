@@ -17,20 +17,10 @@ body {
 }
 
 .btn-numbers {
-    border-radius: 30%;
-    margin: 4px 1px;
-    height: 40px;
-    width: 60px;
-    border: none;
     background-color: lightgrey;
 }
 
 .btn-operators {
-    border-radius: 30%;
-    margin: 4px 1px;
-    height: 40px;
-    width: 60px;
-    border: none;
     background-color: rgb(198, 130, 2);
 }
 
@@ -44,23 +34,28 @@ body {
     padding: 5px;
 }
 
-input:hover {
-    background-color: blue;
-    color: white;
-    cursor: pointer;
-    transition: 0.4s;
 
-    &:active {
-        filter: brightness(70%);
-        transition: background 0s;
+input {
+    border-radius: 30%;
+    margin: 4px 1px;
+    height: 40px;
+    width: 60px;
+    border: none;
+
+    &:hover {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:active {
+            filter: brightness(70%);
+            transition: background 0s;
+        }
     }
 }
 
 .btn-operators-clicked-on {
     color: white;
     background-color: red;
-    border-radius: 30%;
-    margin: 4px 1px;
-    height: 40px;
-    width: 60px;
 }
