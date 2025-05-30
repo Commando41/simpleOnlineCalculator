@@ -55,3 +55,12 @@ input:hover {
         transition: background 0s;
     }
 }
+
+.btn-operators-clicked-on {
+    color: white;
+    background-color: red;
+    border-radius: 30%;
+    margin: 4px 1px;
+    height: 40px;
+    width: 60px;
+}

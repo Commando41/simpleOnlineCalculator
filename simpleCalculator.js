@@ -132,11 +132,9 @@ function percentage() {
     percentages = (percentages + 1) % 2;
     percentage_button = document.getElementById("percentage");
     if(percentages) {
-        percentage_button.style.backgroundColor = "blue";
-        percentage_button.style.color = "white";
+        percentage_button.classList.replace("btn-operators","btn-operators-clicked-on");
     }else{
-        percentage_button.style.backgroundColor = 'rgb(198, 130, 2)';
-        percentage_button.style.color = "black";
+        percentage_button.classList.replace("btn-operators-clicked-on","btn-operators");
     }
 }
 
@@ -188,4 +186,5 @@ function inverse() {
         inversed = inversed.slice(1,);
     }
     screen.innerHTML = op + `${parseFloat(inversed) ** -1}`;
+    operated = true;
 }
